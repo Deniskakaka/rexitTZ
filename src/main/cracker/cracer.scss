@@ -209,6 +209,7 @@
         font-size: 30px;
         outline: none;
         cursor: pointer;
+        margin-bottom: 20px;
 
         @include for-medium-up {
             display: none;
