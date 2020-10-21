@@ -1,0 +1,184 @@
+@import '../breakpoint/breakpoints.scss';
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-top {
+    background-color: #333333;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    padding-left: 300px;
+
+    @include for-e-large-up {
+        padding-left: 200px;
+    }
+
+    @include for-small-up {
+        padding-left: 70px;
+        justify-content: flex-start;
+    }
+
+    &__orderInfo {
+        width: 370px;
+        display: flex;
+
+        @include for-medium-up {
+            width: 250px;
+        }
+
+        ul {
+            margin: 0;
+            display: flex;
+            flex-basis: 100%;
+            justify-content: space-around;
+            align-items: center;
+            color: #ffffff;
+
+            li {
+                list-style-type: none;
+                font-weight: 700;
+
+                @include for-e-large-up {
+                    font-weight: 400;
+                }
+
+                @include for-medium-up {
+                    font-size: 12px;
+                }
+
+                @include for-medium-up {
+                    a>img {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                }
+
+                @include for-medium-up {
+                    span>img {
+                        width: 10px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-botton {
+    position: relative;
+    z-index: 1;
+    background-color: #686967;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+
+    @include for-e-large-up {
+        height: 100px;
+    }
+
+    &__menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        span {
+            position: absolute;
+            top: -45px;
+            left: -110px;
+            font-size: 60px;
+            font-family: Kristi, Arial, Helvetica, sans-serif;
+            color: #f7f7f7;
+
+            @include for-e-large-up {
+                font-size: 40px;
+                top: -30px;
+                left: -40px;
+            }
+
+            @include for-medium-up {
+                font-size: 30px;
+                top: -20px;
+                left: -30px;
+            }
+
+            @include for-small-up {
+                display: none;
+            }
+        }
+
+        span::after {
+            position: absolute;
+            bottom: -5px;
+            right: -20px;
+            content: 'logo';
+            font-size: 18px;
+            font-family: Lato;
+
+            @include for-medium-up {
+                font-size: 13px;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            width: 806px;
+            height: 73px;
+            justify-content: space-around;
+
+            @include for-e-large-up {
+                width: 600px;
+            }
+
+            @include for-medium-up {
+                width: 400px;
+            }
+
+            @include for-small-up {
+                max-width: 320px;
+                padding: 0;
+            }
+
+            a {
+                color: #f7f7f7;
+                font-family: "Fredoka One", Arial, Helvetica, sans-serif;
+                text-decoration: none;
+            }
+
+            li {
+                display: block;
+                list-style-type: none;
+                width: 114px;
+                text-align: center;
+                font-size: 18px;
+                height: 30px;
+                font-weight: 400;
+                border-bottom: 4px solid transparent;
+
+                &:hover {
+                    border-bottom-color: #ff4200;
+                }
+
+                @include for-e-large-up {
+                    width: 80px;
+                    font-size: 15px;
+                }
+
+                @include for-medium-up {
+                    font-size: 13px;
+                }
+
+                @include for-small-up {
+                    width: 55px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,439 @@
+@import '../../breakpoint/breakpoints.scss';
+
+.cracer-page {
+    background-image: url('../img/food.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1352px;
+    position: relative;
+    z-index: 1;
+
+    @include for-large-up {
+        height: 1120px;
+    }
+
+    @include for-medium-up {
+        height: 820px;
+    }
+
+    &__white {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-image: url('../img/white.png');
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.cracer-page__white-about {
+    position: relative;
+    align-self: flex-end;
+    width: 1430px;
+    height: 482px;
+
+    @include for-e-large-up {
+        width: 800px;
+        align-self: center;
+
+        &>img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @include for-large-up {
+        width: 600px;
+        align-self: flex-start;
+        margin-top: 50px;
+
+        &>img {
+            width: 220px;
+            height: 220px;
+        }
+    }
+
+    @include for-medium-up {
+        width: 450px;
+    }
+
+    @include for-small-up {
+        align-self: center;
+        width: 320px;
+
+        &>img {
+            display: none;
+        }
+    }
+
+    &>span {
+        position: absolute;
+        top: 0;
+        color: #666666;
+        font-family: "Fredoka One";
+        font-size: 48px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 9.6px;
+
+        @include for-e-large-up {
+            font-size: 34px;
+        }
+
+        @include for-large-up {
+            font-size: 24px;
+        }
+
+        @include for-small-up {
+            display: block;
+            transform: translate(15%, -50%);
+            font-size: 16px;
+        }
+    }
+
+    &__pink {
+        position: absolute;
+        top: 100px;
+        left: 150px;
+        width: 1270px;
+        height: 360px;
+        background-color: #d7bfbf;
+        opacity: 0.74;
+
+        @include for-e-large-up {
+            width: 620px;
+        }
+
+        @include for-large-up {
+            left: 80px;
+            top: 60px;
+            height: 260px;
+        }
+
+        @include for-medium-up {
+            width: 450px;
+        }
+
+        @include for-small-up {
+            width: 100%;
+            height: 320px;
+            left: 0;
+        }
+
+        span {
+            position: absolute;
+            color: #333333;
+            font-family: Kristi;
+            font-size: 72px;
+            font-weight: 400;
+            right: 40%;
+            bottom: -40px;
+
+            @include for-e-large-up {
+                display: none;
+            }
+        }
+
+        p {
+            width: 620px;
+            height: 240px;
+            color: #333333;
+            font-family: Lato;
+            line-height: 28px;
+            margin: 38px 0 0 80px;
+
+            @include for-e-large-up {
+                width: 450px;
+            }
+
+            @include for-large-up {
+                line-height: 22px;
+                margin: 10px 0 0 40px;
+            }
+
+            @include for-medium-up {
+                line-height: 16px;
+                width: 100%;
+                height: 180px;
+                margin: 30px 0 0 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.cracer-page__white-constructor {
+    position: relative;
+    width: 937px;
+    height: 637px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-e-large-up {
+        width: 720px;
+
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @include for-medium-up {
+        width: 520px;
+
+        & img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @include for-small-up {
+        width: 320px;
+        margin-top: 40px;
+    }
+
+    button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.24), 0 0 6px rgba(0, 0, 0, 0.12);
+        background-color: #ff4200;
+        color: #ffffff;
+        border-radius: 50%;
+        border: none;
+        font-size: 30px;
+        outline: none;
+        cursor: pointer;
+
+        @include for-medium-up {
+            display: none;
+        }
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        width: 620px;
+        height: 6px;
+
+        @include for-e-large-up {
+            width: 520px;
+        }
+
+        @include for-medium-up {
+            width: 320px;
+        }
+    }
+
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        @include for-e-large-up {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include for-medium-up {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &>span:first-child {
+        color: #333333;
+        font-family: "Fredoka One";
+        font-size: 48px;
+        font-weight: 400;
+        letter-spacing: 9.6px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+
+        @include for-e-large-up {
+            font-size: 38px;
+        }
+
+        @include for-medium-up {
+            font-size: 22px;
+            margin-top: 50px;
+        }
+
+        @include for-small-up {
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &>span:nth-child(2) {
+        position: absolute;
+        top: 100px;
+        right: 155px;
+        color: #333333;
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 700;
+
+        @include for-e-large-up {
+            top: 80px;
+            right: 100px;
+        }
+
+        @include for-medium-up {
+            top: 120px;
+            right: 100px;
+            font-size: 18px;
+        }
+
+        @include for-small-up {
+            font-size: 14px;
+            top: 100px;
+            right: 40px;
+        }
+    }
+
+    &__soybean,
+    &__sesame,
+    &__wheat,
+    &__corn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 100%;
+
+        span {
+            color: #333333;
+            font-family: Lato;
+            font-size: 30px;
+            font-weight: 400;
+            width: 55px;
+
+            @include for-e-large-up {
+                font-size: 26px;
+            }
+
+            @include for-small-up {
+                font-size: 16px;
+                margin-left: 5px;
+            }
+
+        }
+
+        input[type=range] {
+            cursor: pointer;
+        }
+    }
+
+    &__soybean {
+
+        input[type=range] {
+            background-color: #00a651;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            background-color: #fdfaf7;
+            border: 2px solid #00a651;
+        }
+
+    }
+
+    &__sesame {
+
+        input[type=range] {
+            background-color: #49743f;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            background-color: #fdfaf7;
+            border: 2px solid #49743f;
+        }
+    }
+
+    &__wheat {
+        input[type=range] {
+            background-color: #aba000;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            background-color: #fdfaf7;
+            border: 2px solid #aba000;
+        }
+    }
+
+    &__corn {
+        input[type=range] {
+            background-color: #939190;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            background-color: #fdfaf7;
+            border: 2px solid #939190;
+        }
+    }
+
+    &__pacage {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+
+        div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 60px;
+            border-radius: 30px;
+            border: 1px solid #ff4200;
+            background-color: transparent;
+            outline: none;
+            color: #ff4200;
+            font-family: "Fredoka One";
+            font-size: 24px;
+            font-weight: 400;
+            margin-left: 100px;
+
+            @include for-e-large-up {
+                width: 320px;
+            }
+
+            @include for-medium-up {
+                width: 220px;
+                font-size: 14px;
+                height: 40px;
+                margin-left: 40px;
+            }
+
+
+            img {
+                position: absolute;
+                right: 55px;
+                top: 25px;
+                width: 20px;
+                height: 11px;
+
+                @include for-e-large-up {
+                    right: 20px;
+                }
+
+                @include for-medium-up {
+                    right: 26px;
+                    width: 10px;
+                    height: 6px;
+                    top: 20px;
+                }
+            }
+        }
+    }
+}

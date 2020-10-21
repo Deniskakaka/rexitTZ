@@ -1,0 +1,167 @@
+@import '../../breakpoint/breakpoints.scss';
+
+.taste-page {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/ultimate-seed-crackers-6.png');
+    background-size: cover;
+    background-position: center;
+    height: 920px;
+    box-shadow: -7px 10px 14px -1px rgba(0,0,0,0.75);
+
+    ::-webkit-scrollbar-button {
+        background-repeat: no-repeat;
+        width: 5px;
+        height: 0px
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #ecedee
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        background-color: #6dc0c8;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #56999f;
+    }
+
+    ::-webkit-resizer {
+        background-repeat: no-repeat;
+        width: 4px;
+        height: 0px
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    @include for-large-up {
+        height: 720px;
+    }
+
+    @include for-medium-up {
+        height: 520px;
+    }
+
+    @include for-small-up {
+        height: 320px;
+    }
+
+    &__center {
+        position: relative;
+        width: 921px;
+        height: 441px;
+
+        @include for-e-large-up {
+            width: 621px;
+            height: 341px;
+        }
+
+        @include for-small-up {
+            width: 320px;
+            height: 150px;
+        }
+
+        p {
+            position: absolute;
+            top: 0;
+            color: #f7f7f7;
+            font-family: "Fredoka One";
+            font-size: 48px;
+            font-weight: 400;
+            width: 417px;
+            text-transform: uppercase;
+            margin: 0;
+            right: 150px;
+            z-index: 2;
+
+            @include for-e-large-up {
+                font-size: 34px;
+                width: 317px;
+                right: 20px;
+            }
+
+            @include for-small-up {
+                right: 0;
+                text-align: center;
+            }
+        }
+
+        &>div {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            z-index: 1;
+            width: 870px;
+            left: -475px;
+            top: -30px;
+            height: 360px;
+            background-color: #83aa75;
+
+            @include for-e-large-up {
+                width: 600px;
+                left: -290px;
+            }
+
+            @include for-small-up {
+                display: none;
+            }
+
+            .scroll {
+                position: absolute;
+                right: 60px;
+                top: 40px;
+                width: 300px;
+                height: 267px;
+                overflow-y: scroll;
+                font-family: Lato;
+                font-size: 18px;
+                font-weight: 400;
+                color: #ffffff;
+
+                @include for-e-large-up {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include for-small-up {
+            transform: translate(-50%, 0)
+        }
+
+        button {
+            width: 260px;
+            height: 80px;
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.24), 0 0 6px rgba(0, 0, 0, 0.12);
+            border-radius: 40px;
+            border: none;
+            background-color: #ff4200;
+            color: #ffffff;
+            font-family: "Fredoka One";
+            font-size: 36px;
+            font-weight: 400;
+            text-transform: uppercase;
+            outline: none;
+            cursor: pointer;
+
+            @include for-e-large-up {
+                width: 160px;
+                height: 60px;
+                font-size: 20px;
+            }
+        }
+    }
+}
