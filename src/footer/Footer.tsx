@@ -26,9 +26,9 @@ const Footer = () => {
             <div className='footer__links'>
                 <span><img src={links} alt='link'/>Share us</span>
                 <div>
-                    <span><img src={pinterest} alt='pinterest'/>https://www.pinterest.com/</span>
-                    <span><img src={facebook} alt='facebook'/>https://www.facebook.com/</span>
-                    <span><img src={google} alt='google'/>https://www.google.com/</span>
+                    <span><img src={pinterest} alt='pinterest'/><a href='#'>https://www.pinterest.com/</a></span>
+                    <span><img src={facebook} alt='facebook'/><a href='#'>https://www.facebook.com/</a></span>
+                    <span><img src={google} alt='google'/><a href='#'>https://www.google.com/</a></span>
                 </div>
             </div>
         </footer>

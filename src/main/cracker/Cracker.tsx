@@ -30,7 +30,7 @@ class Cracker extends React.PureComponent<any, state>{
             this.setState( {
                 soybean: this.state.soybean > 0 ? this.state.soybean - 1 : 0,
                 sesame: this.state.sesame > 0 ? this.state.sesame - 1 : 0,
-                wheat: this.state.wheat> 0 ? this.state.wheat - 1 : 0,
+                wheat: this.state.wheat > 0 ? this.state.wheat - 1 : 0,
             })
         }
     }
@@ -61,32 +61,31 @@ class Cracker extends React.PureComponent<any, state>{
         const wheat = require('../../img/wheat.png').default;
         const corn = require('../../img/corn.png').default;
         const pacage = require('../../img/pacage.png').default;
-        const arrow = require('../../img/orange-arrow.png').default;
         
         return (
-            <div className='cracer-page'>
+            <section className='cracer-page'>
                 <div className='cracer-page__white'>
                     <div className='cracer-page__white-about'>
                         <img src={whatIsIt} alt='whatIsIt'/>
-                        <span>About Cracker</span>
+                        <h2>About Cracker</h2>
                         <div className='cracer-page__white-about__pink'>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                            architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est,
-                            qui dolorem ipsum quia dolor sit amet, consectetur, 
-                            adipisci velit,
-                            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat, 
+                                sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est,
+                                qui dolorem ipsum quia dolor sit amet, consectetur, 
+                                adipisci velit,
+                                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                             </p>
                             <span>Cracker</span>
                         </div>
                     </div>
                     <div className='cracer-page__white-constructor'>
-                        <span>Cracker constructor</span>
+                        <h2>Cracker constructor</h2>
                         <span>current value:143 €</span>
                         <div className='cracer-page__white-constructor__soybean'>
                             <img src={soybean} alt='soybean'/>
@@ -110,12 +109,17 @@ class Cracker extends React.PureComponent<any, state>{
                         </div>
                         <div className='cracer-page__white-constructor__pacage'>
                             <img src={pacage} alt='pacage'/>
-                            <div>Choose your pack <img src={arrow} alt='arrow'/></div>
+                            <select>
+                                <option>Choose your pack</option>
+                                <option>Lorem</option>
+                                <option>Lorem</option>
+                            </select>
+                            
                         </div>
                         <button>+</button>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 };

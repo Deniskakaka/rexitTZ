@@ -1,184 +1,199 @@
 @import '../breakpoint/breakpoints.scss';
 
-header {
+.header {
     display: flex;
     flex-direction: column;
-}
+    width: 100%;
+    height: 190px;
 
-
-.header-top {
-    background-color: #333333;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    padding-left: 300px;
-
-    @include for-e-large-up {
-        padding-left: 200px;
-    }
-
-    @include for-small-up {
-        padding-left: 70px;
-        justify-content: flex-start;
-    }
-
-    &__orderInfo {
-        width: 370px;
+    &__order-info {
         display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 60px;
+        background-color: #333333;
 
-        @include for-medium-up {
-            width: 250px;
-        }
-
-        ul {
-            margin: 0;
+        & > ul {
+            align-self: center;
+            margin-left: 530px;
             display: flex;
-            flex-basis: 100%;
             justify-content: space-around;
             align-items: center;
             color: #ffffff;
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 700;
+            list-style-type: none;
+            padding: 0;
 
-            li {
-                list-style-type: none;
-                font-weight: 700;
+            @include for-e-large-up {
+                margin-left: 260px;
+                font-size: 10px;
+            }
 
-                @include for-e-large-up {
-                    font-weight: 400;
-                }
+            @include for-large-up {
+                margin-left: 0;
+            }
+
+            & > li:nth-child(2) {
+                margin-right: 55px;
 
                 @include for-medium-up {
-                    font-size: 12px;
+                    margin-right: 25px;
                 }
+            }
 
-                @include for-medium-up {
-                    a>img {
+            & > li:nth-child(1) {
+
+                @include for-large-up {
+                    img {
                         width: 20px;
                         height: 20px;
-                        margin-right: 10px;
+                    }
+                }
+            }
+
+            li {
+                flex-grow: 1;
+                position: relative;
+                text-transform: uppercase;
+
+                span {
+                    margin-right: 10px;
+                }
+
+                img {
+                    margin-left: 17px;
+
+                    &:hover+ul {
+                        top: 20px;
+                        opacity: 1;
                     }
                 }
 
-                @include for-medium-up {
-                    span>img {
-                        width: 10px;
-                        height: 8px;
+                ul {
+                    width: 100%;
+                    position: absolute;
+                    transition: all 0.8s ease;
+                    top: 100px;
+                    opacity: 0;
+                    padding: 0;
+                    text-align: center;
+                    list-style-type: none;
+
+                    li {
+                        margin-top: 5px;
                     }
                 }
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 130px;
+        background-color: #5c5b57;
+
+        ul {
+            align-self: center;
+            margin-top: 51px;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            font-family: "Fredoka One";
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding: 0;
+            margin-left: 220px;
+
+            @include for-e-large-up {
+                font-size: 14px;
+                margin-left: 0;
+            }
+
+            @include for-small-up {
+                font-size: 10px;
+            }
+
+            &>li:first-child {
+                margin-left: 0;
+            }
+
+            li {
+                flex-grow: 1;
+                flex-shrink: 2;
+                text-align: center;
+                border-bottom: 4px solid transparent;
+                padding-bottom: 15px;
+                margin-left: 86px;
+
+                @include for-e-large-up {
+                    margin-left: 46px;
+                }
+
+                @include for-medium-up  {
+                    margin-left: 20px;
+                }
+
+                a {
+                    color: #f7f7f7;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    border-bottom: 4px solid #ff4200;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: 25px;
+        left: 500px;
+
+        @include for-e-large-up {
+            left: 150px;
+        }
+
+        @include for-large-up {
+          display: none;          
+        } 
+
+        span {
+            color: #f7f7f7;
+            font-family: Kristi;
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 60.96px;
+
+            @include for-e-large-up {
+                font-size: 45px;
+            }
+
+            &::after {
+                position: absolute;
+                top: 30px;
+                right: -12px;
+                content: 'logo';
+                color: #f7f7f7;
+                font-family: Lato;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 60.96px;
             }
         }
     }
 }
 
-.header-botton {
-    position: relative;
-    z-index: 1;
-    background-color: #686967;
-    height: 180px;
-    display: flex;
-    justify-content: center;
+.semen {
+    margin-right: 72px;
+    margin-left: 0;
 
-    @include for-e-large-up {
-        height: 100px;
-    }
-
-    &__menu {
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        span {
-            position: absolute;
-            top: -45px;
-            left: -110px;
-            font-size: 60px;
-            font-family: Kristi, Arial, Helvetica, sans-serif;
-            color: #f7f7f7;
-
-            @include for-e-large-up {
-                font-size: 40px;
-                top: -30px;
-                left: -40px;
-            }
-
-            @include for-medium-up {
-                font-size: 30px;
-                top: -20px;
-                left: -30px;
-            }
-
-            @include for-small-up {
-                display: none;
-            }
-        }
-
-        span::after {
-            position: absolute;
-            bottom: -5px;
-            right: -20px;
-            content: 'logo';
-            font-size: 18px;
-            font-family: Lato;
-
-            @include for-medium-up {
-                font-size: 13px;
-            }
-        }
-
-        ul {
-            display: flex;
-            align-items: center;
-            width: 806px;
-            height: 73px;
-            justify-content: space-around;
-
-            @include for-e-large-up {
-                width: 600px;
-            }
-
-            @include for-medium-up {
-                width: 400px;
-            }
-
-            @include for-small-up {
-                max-width: 320px;
-                padding: 0;
-            }
-
-            a {
-                color: #f7f7f7;
-                font-family: "Fredoka One", Arial, Helvetica, sans-serif;
-                text-decoration: none;
-            }
-
-            li {
-                display: block;
-                list-style-type: none;
-                width: 114px;
-                text-align: center;
-                font-size: 18px;
-                height: 30px;
-                font-weight: 400;
-                border-bottom: 4px solid transparent;
-
-                &:hover {
-                    border-bottom-color: #ff4200;
-                }
-
-                @include for-e-large-up {
-                    width: 80px;
-                    font-size: 15px;
-                }
-
-                @include for-medium-up {
-                    font-size: 13px;
-                }
-
-                @include for-small-up {
-                    width: 55px;
-                    font-size: 10px;
-                }
-            }
-        }
+    @include for-medium-up {
+        margin-right: 40px;
     }
 }

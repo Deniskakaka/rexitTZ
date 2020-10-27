@@ -12,6 +12,11 @@
     @include for-e-large-up {
         flex-direction: column;
         align-items: center;
+        height: 680px;
+    }
+
+    @include for-medium-up {
+        height: 580px;
     }
 
     &__phone {
@@ -143,11 +148,15 @@
             span {
                 display: flex;
                 align-items: center;
-                color: #ffffff;
                 font-family: Lato;
                 font-size: 14px;
                 font-weight: 400;
                 margin-top: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                }
 
                 img {
                     margin-right: 10px;

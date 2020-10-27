@@ -2,19 +2,19 @@
 
 .cracer-page {
     background-image: url('../img/food.png');
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 1352px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 
     @include for-large-up {
         height: 1120px;
     }
 
     @include for-medium-up {
-        height: 820px;
+        height: 1000px;
     }
 
     &__white {
@@ -29,13 +29,13 @@
 }
 
 .cracer-page__white-about {
+    display: flex;
     position: relative;
     align-self: flex-end;
-    width: 1430px;
+    width: 80%;
     height: 482px;
 
     @include for-e-large-up {
-        width: 800px;
         align-self: center;
 
         &>img {
@@ -45,32 +45,23 @@
     }
 
     @include for-large-up {
-        width: 600px;
-        align-self: flex-start;
         margin-top: 50px;
-
+        
         &>img {
             width: 220px;
             height: 220px;
         }
     }
 
-    @include for-medium-up {
-        width: 450px;
-    }
-
     @include for-small-up {
         align-self: center;
-        width: 320px;
 
         &>img {
             display: none;
         }
     }
 
-    &>span {
-        position: absolute;
-        top: 0;
+    & > h2 {
         color: #666666;
         font-family: "Fredoka One";
         font-size: 48px;
@@ -97,14 +88,11 @@
         position: absolute;
         top: 100px;
         left: 150px;
-        width: 1270px;
+        width: 100%;
         height: 360px;
         background-color: #d7bfbf;
         opacity: 0.74;
 
-        @include for-e-large-up {
-            width: 620px;
-        }
 
         @include for-large-up {
             left: 80px;
@@ -112,14 +100,10 @@
             height: 260px;
         }
 
-        @include for-medium-up {
-            width: 450px;
-        }
-
         @include for-small-up {
-            width: 100%;
             height: 320px;
-            left: 0;
+            left: 10px;
+            overflow: hidden;
         }
 
         span {
@@ -166,14 +150,13 @@
 
 .cracer-page__white-constructor {
     position: relative;
-    width: 937px;
+    width: 60%;
     height: 637px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @include for-e-large-up {
-        width: 720px;
 
         & img {
             width: 50px;
@@ -182,7 +165,6 @@
     }
 
     @include for-medium-up {
-        width: 520px;
 
         & img {
             width: 30px;
@@ -191,7 +173,6 @@
     }
 
     @include for-small-up {
-        width: 320px;
         margin-top: 40px;
     }
 
@@ -221,16 +202,8 @@
         border: none;
         border-radius: 5px;
         outline: none;
-        width: 620px;
+        width: 80%;
         height: 6px;
-
-        @include for-e-large-up {
-            width: 520px;
-        }
-
-        @include for-medium-up {
-            width: 320px;
-        }
     }
 
 
@@ -251,7 +224,7 @@
         }
     }
 
-    &>span:first-child {
+    & > h2 {
         color: #333333;
         font-family: "Fredoka One";
         font-size: 48px;
@@ -261,11 +234,11 @@
         margin-bottom: 50px;
 
         @include for-e-large-up {
-            font-size: 38px;
+            font-size: 26px;
         }
 
         @include for-medium-up {
-            font-size: 22px;
+            font-size: 18px;
             margin-top: 50px;
         }
 
@@ -276,7 +249,7 @@
         }
     }
 
-    &>span:nth-child(2) {
+    & > span {
         position: absolute;
         top: 100px;
         right: 155px;
@@ -384,56 +357,67 @@
     }
 
     &__pacage {
+        position: relative;
         display: flex;
         width: 100%;
         margin-top: 20px;
 
-        div {
+        &:after {
+            content: '';
+            display:  block;
+            background-image: url('../img/orange-arrow.png');
+            width: 20px;
+            height: 11px;
+            position: absolute;
+            left: 470px;
+            top: 25px;
+            z-index: 1;
+
+            @include for-large-up {
+                left: 265px;
+                top: 18px;
+                width: 15px;
+                height: 8px;
+                background-size: contain;
+            }
+
+            @include for-medium-up {
+                left: 215px;
+            }
+        }
+
+        select {
             position: relative;
+            z-index: 10;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            background: none;
             width: 400px;
             height: 60px;
             border-radius: 30px;
             border: 1px solid #ff4200;
-            background-color: transparent;
-            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
             color: #ff4200;
             font-family: "Fredoka One";
             font-size: 24px;
             font-weight: 400;
+            line-height: 40px;
+            padding-left: 80px;
+            outline: none;
+            cursor: pointer;
             margin-left: 100px;
 
-            @include for-e-large-up {
-                width: 320px;
-            }
-
-            @include for-medium-up {
-                width: 220px;
-                font-size: 14px;
+            @include for-large-up {
+                width: 200px;
                 height: 40px;
+                font-size: 18px;
+                padding-left: 10px;
                 margin-left: 40px;
             }
 
-
-            img {
-                position: absolute;
-                right: 55px;
-                top: 25px;
-                width: 20px;
-                height: 11px;
-
-                @include for-e-large-up {
-                    right: 20px;
-                }
-
-                @include for-medium-up {
-                    right: 26px;
-                    width: 10px;
-                    height: 6px;
-                    top: 20px;
-                }
+            @include for-medium-up {
+                min-width: 200px;
+                margin-left: 10px;
             }
         }
     }
