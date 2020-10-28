@@ -2,7 +2,7 @@
 
 .footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background-image: url('../img/footer.png');
     background-size: cover;
     background-position: center;
@@ -12,6 +12,7 @@
     @include for-e-large-up {
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         height: 680px;
     }
 
@@ -25,10 +26,12 @@
         justify-content: space-between;
         height: 80px;
         width: 180px;
+        margin-right: 120px;
 
         @include for-e-large-up {
             flex-direction: row;
             width: 260px;
+            margin-right: 0;
         }
 
         & span:first-child {
@@ -70,10 +73,12 @@
         justify-content: space-between;
         height: 154px;
         width: 164px;
+        margin-right: 156px;
 
         @include for-e-large-up {
             width: 260px;
             flex-direction: row;
+            margin-right: 0;
         }
 
         & span {
