@@ -15,7 +15,7 @@ module.exports = (env, argv) => {
         output: {
             path: __dirname + "/pages",
             filename: "bundle.js",
-            publicPath: "/",
+            publicPath: "./",
         },
         module: {
             rules: [
