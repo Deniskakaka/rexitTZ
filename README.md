@@ -11,4 +11,4 @@
 
 In order to start the project locally, clone the repository, then in the console, go to the root folder of the project and use the command npm start to start the local server.
 
-<a href=''>Link on project</a>
+<a href='https://deniskakaka.github.io/rexitTZ/'>Link on project</a>
